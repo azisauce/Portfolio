@@ -1,15 +1,23 @@
-import "./GlassContainer.css"
+import React from "react";
+import "./GlassContainer.css";
 
-function GlassContainer() {
-    return (
-        <div className="glass-container">
-            <div className="glass-content">
-                <h1>Glassmorphism</h1>
-                <p>Experience the beautiful frosted glass effect with backdrop blur, subtle transparency, and elegant borders that create depth and modern aesthetics.</p>
-                <button className="glass-button" onClick={() => {}}>Interact</button>
-            </div>
-        </div>
-    )
+interface GlassContainerProps extends React.HTMLAttributes<HTMLDivElement> {
+  children?: React.ReactNode;
+}
+
+function GlassContainer({ className = "", children, ...rest }: GlassContainerProps) {
+  return (
+    <div className={`glass-container ${className}`.trim()} {...rest}>
+      <div className="glass-content">
+        {children ?? (
+          <>
+            <h1>Title</h1>
+            <p>Description</p>
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default GlassContainer

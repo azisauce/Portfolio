@@ -3,7 +3,9 @@
   margin: 0 auto;
   text-align: center;
 }
-
+.sections-container > * {
+  scroll-snap-align: start;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

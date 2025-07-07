@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -14,12 +14,13 @@
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #143458 0%, #7E2553 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
+  
 }
 
 :root::before {
@@ -32,6 +33,49 @@
   background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
   background-size: 50px 50px;
   animation: float 20s ease-in-out infinite;
+}
+
+.sections-container {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.sections-container > * {
+  scroll-snap-align: start;
+}
+
+.bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 15s ease-in-out infinite;
+}
+
+.bg-shape:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bg-shape:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(45deg, #feca57, #ff9ff3);
+  top: 60%;
+  right: 10%;
+  animation-delay: -5s;
+}
+
+.bg-shape:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #48cae4, #023e8a);
+  bottom: 20%;
+  left: 20%;
+  animation-delay: -10s;
 }
 
 @keyframes float {

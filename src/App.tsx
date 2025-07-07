@@ -24,7 +24,11 @@ function App() {
   }, []);
 
   return (
+    
     <div>
+      <div className="bg-shape"></div>
+      <div className="bg-shape"></div>
+      <div className="bg-shape"></div>
       <NavDots activeSection={activeSection} sections={5} />
       <div className="sections-container">
         <Hero />

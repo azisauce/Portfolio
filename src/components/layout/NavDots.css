@@ -1,0 +1,14 @@
+.nav-dots {
+    right: 20px;
+    top: 40%;
+}
+
+.dot {
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #333;
+}

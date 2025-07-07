@@ -32,7 +32,7 @@ portfolio/
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/azisauce/portfolio.git
+   git clone https://github.com/azisauce/Portfolio.git
    cd portfolio
    ```
 2. **Install dependencies**
